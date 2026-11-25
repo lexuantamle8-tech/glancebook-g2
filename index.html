@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlanceBook G2 — Even Realities Smart-Glasses Crypto &amp; Polymarket HUD</title>
+  <style>
+    body { margin: 0; background: #070b08; color: #7dff9b; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+    h1 { font-size: 18px; margin: 0 0 6px; letter-spacing: 0.04em; }
+    .sub { font-size: 12px; color: #49a860; margin: 0 0 16px; }
+    .lens { width: 576px; max-width: 100%; height: 288px; background: #030a04; border: 2px solid #2b6e3c; border-radius: 14px; box-shadow: 0 0 32px rgba(74, 222, 128, 0.18); display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+    #g2-header { padding: 10px 14px; border-bottom: 1px solid #1e4f2b; font-weight: 700; font-size: 13px; color: #9effb5; white-space: pre; }
+    #g2-body { padding: 12px 14px; font-size: 13px; line-height: 1.65; white-space: pre; flex: 1; color: #7dff9b; overflow: hidden; }
+    #g2-footer { padding: 9px 14px; border-top: 1px solid #1e4f2b; font-size: 12px; color: #469c5a; white-space: pre; }
+    .controls { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+    button { background: #0f2414; color: #7dff9b; border: 1px solid #2b6e3c; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-family: inherit; font-weight: 700; font-size: 12px; }
+    button:hover { background: #193b21; }
+    #bridge-status { margin-top: 12px; font-size: 11px; color: #49a860; }
+  </style>
+</head>
+<body>
+  <h1>GLANCEBOOK G2 — 576x288 EVEN REALITIES HUD</h1>
+  <p class="sub">Track 02 (Crypto &amp; DeFi: Hyperliquid + Polymarket) · Track 03 (Exchanges: Binance Spot Basis) · Read-Only / Zero Custody</p>
+  <div class="lens">
+    <div id="g2-header">Loading live feeds...</div>
+    <div id="g2-body">Connecting to Hyperliquid, Polymarket &amp; Binance...</div>
+    <div id="g2-footer">TAP: Next View | SCROLL: Rows | 2xTAP: Exit</div>
+  </div>
+  <div class="controls">
+    <button id="btn-tap">Tap (Next View)</button>
+    <button id="btn-scroll">Scroll Rows</button>
+    <button id="btn-refresh">Refresh Live Data</button>
+  </div>
+  <div id="bridge-status">Initializing Even Hub SDK...</div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
